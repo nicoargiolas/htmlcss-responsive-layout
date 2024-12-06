@@ -12,8 +12,8 @@ body {
 
     /* Regole header */
 header {
-    height: 100px;
     background-color: white;
+    text-align: center;
 }
 
 header a {
@@ -23,19 +23,278 @@ header a {
 header h1 {
     font-family: "Nerko One", cursive;
     color: #FF9613;
+    padding: 10px;
 }
 
     /* Regole contenuto principale */
+main {
+    background-color: #F6F5F3;
+}
+
+.container {
+    padding: 20px;
+}
+
+    /* Prima sezione */
+
+.first-section .box {
+    width: 100%;
+    background-color: white;
+}
+
+.first-section h3 {
+    color: grey;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+.first-section h1 {
+    color: #4F3969;
+    margin-bottom: 20px;
+}
+
+.first-section h1>span {
+    display: none;
+}
+
+.first-section .img-box img {
+    width: 100%;
+    height: auto;
+}
+
+    /* Lista preparazione */
+.preparation>* {
+    padding-left: 20px;
+}
+
+.preparation h2 {
+    padding: 20px;
+}
+
+.preparation ul {
+    list-style: none;
+    padding-bottom: 30px;
+    font-size: 14px;
+}
+
+.preparation ul li {
+    line-height: 2;
+}
+
+    /* Social links */
+
+.social-links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    background-color: #F6F5F3;
+    padding: 30px 0;
+}
+
+.social-links a {
+    padding: 5px 10px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.social-links .social-name {
+    display: none;
+}
+
+.fa-facebook {
+    color: #1A77F3;
+}
+
+.fa-twitter {
+    color: #029EFF;
+}
+
+.fa-instagram {
+    color: #DD6D8A;
+}
+
+.fa-pinterest {
+    color: #E61B1E;
+}
+
+.fa-youtube {
+    color: #E61B1E;
+}
+
+    /* Banner */
+.banner {
+    display: none;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+    /* Blocco presentazione */
+
+.presentation {
+    width: 100%;
+}
+
+.presentation h1 {
+    font-weight: 400;
+}
+
+.presentation hr {
+    color: #FF9613;
+    width: 60px;
+    margin: 10px 0;
+}
+
+.presentation img {
+    width: 70%;
+    height: auto;
+    margin: 5px 15%;
+}
+
+.presentation p {
+    line-height: 2;
+}
 
 
     /* Regole footer */
 
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #7D69A4;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+}
+
+footer>* {
+    padding: 20px;
+}
+
+footer .footer-left {
+    line-height: 2;
+}
+
+footer .footer-left :first-child {
+    font-weight: 600;
+}
+
+footer .footer-right {
+    line-height: 2.5;
+}
+
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+}
+
+footer ul li {
+    padding: 0 10px;
+}
+
+
 /* Versione tablet */
 @media screen and (min-width:768px) {
+
+    header {
+        text-align: left;
+    }
+
+    .container {
+        padding: 20px 40px;
+    }
+
+    .first-section h1 {
+        font-size: 32px;
+    }
+
+    .first-section h1>span {
+        display: inline;
+    }
+
+    .preparation ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .preparation ul li {
+        width: 30%;
+    }
+
+    .social-links a {
+        padding: 5px 50px;
+    }
+
+    .banner {
+        display: inline-block;
+        margin-bottom: 30px;
+    }
+
+    .presentation img {
+        float: left;
+        width: 30%;
+        height: auto;
+        margin: 0;
+        margin-right: 5px;
+    }
     
 }
 
 /* Versione desktop */
 @media screen and (min-width:992px) {
+
+    .container {
+        padding: 20px 12%;
+    }
     
+    .first-section h1 {
+        font-size: 38px;
+    }
+
+    .first-section .box {
+        display: flex;
+    }
+
+    .first-section .box .img-box {
+        width: 70%;
+    }
+
+    .first-section .preparation {
+        width: 30%;
+    }
+
+    .preparation ul {
+        display: block;
+    }
+
+    .preparation ul li {
+        width: 100%;
+    }
+
+    .social-links a {
+        text-decoration: none;
+        padding: 5px 24px;
+        
+    }
+
+    .social-links a span:last-child {
+        font-size: 14px;
+        color: black;
+    }
+
+    .social-links .social-name {
+        display: inline;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
 }
